@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Test written for Pastbook technical assignment",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "install": "git clone https://github.com/blasten/turn.js -b master node_modules/turn.js"
   },
   "repository": {
     "type": "git",

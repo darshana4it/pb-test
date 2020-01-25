@@ -1,0 +1,79 @@
+$card-radius: rem(55px);
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    
+	position: absolute;
+    overflow: hidden;
+    
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+    backface-visibility: hidden;
+    
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+
+    
+    width: 100%;
+    &--focus {
+        > .card {
+            background-color: color('ui', 'lightest');
+            padding: 3rem;
+        }
+    }
+    &--blur {
+        transform: scale(0.8);
+        transform-origin: bottom;
+        transition: transform 300ms;
+        > .card {
+            background-color: white;
+        }
+    }
+    &--sticked-to-bottom {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+    &--active {
+        .show-on-card-inactive {
+            max-height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+    }
+    &--inactive {
+        .show-on-card-active {
+            max-height: 0;
+            overflow: hidden;
+            visibility: hidden;
+        }
+    }
+}
+
+.card {
+    width: 100%;
+    &--round {
+        border-radius: $card-radius $card-radius 0 0;
+    }
+    &--full-height {
+        height: 100vh;
+    }
+
+
+    &--action {
+
+    }
+    
+    /// Notch fixer for phones with notches.
+    /// Todo: Activate by identifying device
+    .card__notch-fixer {
+        display: block;
+        padding-top: 2rem;
+        width: 100%;
+    }
+}

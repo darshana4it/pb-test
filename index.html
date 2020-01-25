@@ -5,31 +5,76 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <title>Book Demo</title>
 <link rel="stylesheet" href="./css/main.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 <body>
-<div class="wrapper">
-    <section class="">
-        <div class="card__notch-fixer"></div>
+<div class="wrapper-perspective">
+    <section id="card-container--landing" class="card-container card-container--focus card-container--active">
+        <div class="card card--round card--full-height">
+            <div class="card__notch-fixer"></div>
 
-        <div class="title-bar">
-        </div>
-        
-        <div class="grid-container container">
-            <div class="row text-center">
-                <div class="col">
-                    <h1>Hi John,</h1>
-                    <h3>We made this picure book from your beautiful memories from 2019</h3>
-                </div>
+            <div class="title-bar">
             </div>
             
-            <div class="row text-center">
-                <div class="col">
-                    <PictureBook />
+            <div class="grid-container container">
+                <div class="row text-center">
+                    <div class="col">
+                        <h1>Hi John,</h1>
+                        <h3>We made this picure book from your beautiful memories from 2019</h3>
+                    </div>
+                </div>
+                
+                <div class="row text-center">
+                    <div class="col d-flex justify-content-center">
+                        <div class="book">
+                            <div class="back"></div>
+                            <div class="page6"></div>
+                            <div class="page5"></div>
+                            <div class="page4"></div>
+                            <div class="page3"></div>
+                            <div class="page2"></div>
+                            <div class="page1"></div>
+                            <div class="front"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <section id="card-container--moments" class="card-container card-container--inactive card-container--sticked-to-bottom">
+        <a class="card card--action card--round text-center bg--white mt-auto d-flex align-items-center justify-content-center show-on-card-inactive" href="#card-container--moments">
+            <svg class="icon icon-size--base mr-2"><use xlink:href="/images/pb-icons.svg#layouts" /></svg>
+            <span class="action-caption">Open Your Book</span>
+        </a>
+        <div class="card card--action card--round text-center bg--base mt-auto d-flex align-items-center justify-content-center show-on-card-active">
+            <svg class="icon icon-size--xl mr-2"><use xlink:href="/images/pb-icons.svg#photos"/></svg>
+            <span class="text-left">
+                <span class="action-caption d-block">Checkout & Save 40% Now!</span>
+                <span class="meta">Offer ends in 1 hour 6 minutes</span>
+            </span>
+        </div>
+    </section>
+    
+    <section id="card-container--checkout" class="card-container card-container--inactive card-container--sticked-to-bottom">
+        <a class="card card--action card--round text-center bg--base mt-auto d-flex align-items-center justify-content-center show-on-card-inactive" href="#card-container--checkout">
+            <svg class="icon icon-size--xl mr-2"><use xlink:href="/images/pb-icons.svg#photos"/></svg>
+            <span class="text-left">
+                <span class="action-caption d-block">Checkout & Save 40% Now!</span>
+                <span class="meta">Offer ends in 1 hour 6 minutes</span>
+            </span>
+        </a>
+        <!-- <div class="card card--action card--round text-center bg--base mt-auto d-flex align-items-center justify-content-center show-on-card-active">
+            <svg class="icon icon-size--xl mr-2"><use xlink:href="/images/pb-icons.svg#photos"/></svg>
+            <span class="text-left">
+                <span class="action-caption d-block">Checkout & Save 40% Now!</span>
+                <span class="meta">Offer ends in 1 hour 6 minutes</span>
+            </span>
+        </div> -->
+    </section>
 </div>
 </body>
-<script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="./js/cardTransition.js"></script>
+<script type="text/javascript" src="./js/functions.js"></script>
 </html>

@@ -1,0 +1,9 @@
+$collapsedHeight: rem(90px);
+
+#card-container--checkout {
+    .card.card--action {
+        padding: 3rem;
+        height: $collapsedHeight;
+        box-shadow: 0px -10px 25px rgba(144, 99, 205, 0.2);
+    }
+}
