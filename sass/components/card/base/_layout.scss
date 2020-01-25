@@ -1,35 +1,50 @@
+/// Card layout
 $card-radius: rem(55px);
+$card-wrapper-bg: color('ui', 'darker');
+$card-padding: rem(30px);
+$blur-transform: scale(0.9);
 
+.card-wrapper {
+    background-color: $card-wrapper-bg;
+    position: relative;
+    overflow:hidden;
+    height: 100vh;
+    width: 100%;
+}
 .card-container {
+    border-radius: $card-radius $card-radius 0 0;
     display: flex;
     flex-direction: column;
-    
 	position: absolute;
+    bottom: 0;
     overflow: hidden;
-    
+
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
     backface-visibility: hidden;
-    
+
 	-webkit-transform: translate3d(0, 0, 0);
 	-moz-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    
 	-webkit-transform-style: preserve-3d;
 	-moz-transform-style: preserve-3d;
     transform-style: preserve-3d;
 
-    
+    transition: all ease-in-out 600ms;
+
+    height: 100vh;
     width: 100%;
     &--focus {
         > .card {
             background-color: color('ui', 'lightest');
-            padding: 3rem;
         }
     }
     &--blur {
-        transform: scale(0.8);
+        transform: scale(0.9);
         transform-origin: bottom;
-        transition: transform 300ms;
+        transition: transform 500ms;
+        opacity: .8;
         > .card {
             background-color: white;
         }
@@ -53,6 +68,8 @@ $card-radius: rem(55px);
 }
 
 .card {
+    padding: $card-padding;
+    position: relative;
     width: 100%;
     &--round {
         border-radius: $card-radius $card-radius 0 0;
@@ -63,7 +80,12 @@ $card-radius: rem(55px);
 
 
     &--action {
-
+        width: 100%;
+        &-size-fix {
+            margin: - ($card-padding);
+            padding: $card-padding;
+            width: vw;
+        }
     }
     
     /// Notch fixer for phones with notches.

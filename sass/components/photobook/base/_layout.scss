@@ -1,5 +1,4 @@
 /// Book layout
-
 $cover-background: #2C2C2C;
 $book-height: 290px;
 $book-width: 280px;
@@ -7,7 +6,7 @@ $book-width: 280px;
 .book {
     transform-style: preserve-3d;
     position: relative;
-    max-width: $book-width;
+    width: $book-width;
     height: $book-height;
     cursor: pointer;
     backface-visibility: visible;

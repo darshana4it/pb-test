@@ -1,3 +1,7 @@
+/// Duration data for animations
+/// 
+/// @type map
+/// Todo: Move to design tokens
 $duration-data: (
     'duration-none': (
         0,
@@ -19,6 +23,10 @@ $duration-data: (
     ),
 );
 
+/// Easing data for motion
+/// 
+/// @type map
+/// Todo: Move to design tokens
 $easing-data: (
     base: cubic-bezier(0.64, 0, 0.35, 1),
     in: cubic-bezier(0.36, 0, 1, 1),
@@ -32,7 +40,6 @@ $easing-data: (
 ///
 /// @param {String} $variant - The key for the given variant.
 /// @return {Number} The duration for the variant (in miliseconds).
-
 @function duration($variant: base) {
     $interpolated-value: 'duration-' + $variant;
     $fetched-value: nth(map-get($duration-data, $interpolated-value), 1);
@@ -48,7 +55,6 @@ $easing-data: (
 ///
 /// @param {String} $variant - The key for the given variant.
 /// @return {String} The cubic-bezier function (string) for the variant.
-
 @function easing($variant: base) {
     $fetched-value: map-get($easing-data, $variant);
 

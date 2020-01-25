@@ -21,9 +21,9 @@
 
 @-webkit-keyframes scaleDown {
 	from { }
-	to { opacity: .6; -webkit-transform: scale(.8); }
+	to { opacity: .6; -webkit-transform: scale(.9); }
 }
 @keyframes scaleDown {
 	from { }
-	to { opacity: .6; -webkit-transform: scale(.8); transform: scale(.8); }
+	to { opacity: .6; -webkit-transform: scale(.9); transform: scale(.9); }
 }
