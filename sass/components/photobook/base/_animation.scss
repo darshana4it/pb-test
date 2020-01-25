@@ -1,0 +1,47 @@
+/// Photo book flip transitions
+/// Todo: Needs to be refactored to be extendible & support z-index
+
+$transition-duration: 300ms;
+$page-rotate: rotateY(-180deg);
+$turned-cover-scale: scale(1.1);
+$turned-page-scale: scale(1.07, 1.05); // Todo: Js based fix required to scale accurately
+
+.book {
+    position: absolute;
+    transition: all $transition-duration;
+    &--cover-open {
+        max-width: auto;
+        .front-cover {
+            background: #C9CDD4;
+            box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+            transform: $page-rotate $turned-cover-scale;
+            transition: all $transition-duration;
+            &:after {
+                opacity: 0;
+            }
+        }
+        .back-cover {
+            background: #ACB1B9;
+            transform: rotateY(-0deg) $turned-cover-scale;
+            transition: all $transition-duration;
+        }
+
+        .page {
+            transform: $turned-page-scale;
+
+            &--flipped {
+                transform: $page-rotate $turned-page-scale;
+            }
+        }
+    }
+
+
+    &--focus-left-page {
+        left: 50%;
+        transform: translateX(50%);
+    }
+    &--focus-right-page {
+        left: -50%;
+        transform: translateX(-50%);
+    }
+}

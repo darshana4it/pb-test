@@ -2,6 +2,7 @@
   "name": "pastbook-test",
   "version": "1.0.0",
   "description": "Test written for Pastbook technical assignment",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install": "git clone https://github.com/blasten/turn.js -b master node_modules/turn.js"
@@ -18,7 +19,6 @@
   "homepage": "https://github.com/darshana4it/pb-test#readme",
   "dependencies": {
     "bootstrap-4-grid": "^3.2.0",
-    "jquery": "^3.4.1",
     "normalize.css": "^8.0.1"
   }
 }

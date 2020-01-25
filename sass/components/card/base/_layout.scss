@@ -35,9 +35,6 @@ $card-radius: rem(55px);
         }
     }
     &--sticked-to-bottom {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
     }
     &--active {
         .show-on-card-inactive {

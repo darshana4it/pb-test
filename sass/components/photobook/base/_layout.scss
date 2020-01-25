@@ -1,0 +1,45 @@
+/// Book layout
+
+$cover-background: #2C2C2C;
+$book-height: 290px;
+$book-width: 280px;
+
+.book {
+    transform-style: preserve-3d;
+    position: relative;
+    max-width: $book-width;
+    height: $book-height;
+    cursor: pointer;
+    backface-visibility: visible;
+}
+
+.front-cover, .back-cover, .page {
+    position: absolute;
+    top: 0; left: 0;
+    transform-style: preserve-3d;
+    transform-origin: left center;
+    transition: transform .5s ease-in-out, box-shadow .35s ease-in-out;
+    height: 100%;
+    width: $book-width;
+}
+  
+.front-cover, .back-cover {
+    background: $cover-background;
+}
+
+.page {
+    background-color: #fff;
+}
+
+.front-cover {
+    box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.05);
+    &:after {
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.24) 73.96%, rgba(0, 0, 0, 0) 100%);
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        height: 290px;
+        width: 15px;
+    }
+}

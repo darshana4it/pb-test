@@ -2,16 +2,20 @@
 @import "../node_modules/normalize.css/normalize.css";
 @import "../node_modules/bootstrap-4-grid/scss/grid.scss";
 
-// Base patterns
+
 @import "base/utilities";
 @import "base/color";
 @import "base/typography";
 @import "base/icons";
 @import "base/spacing";
+@import "base/border";
+@import "base/z-index";
+@import "base/transitions";
 
-// Components
+
 @import "components/layout";
 @import "components/color";
 @import "components/typography";
 @import "components/icons";
 @import "components/card/card";
+@import "components/photobook/book";
