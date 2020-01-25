@@ -21,6 +21,20 @@ $font-family-data: (
         monospace},
 );
 
+/// Font weight data
+/// Font weight values for available families.
+/// Default values are based on Lato.
+/// 
+/// @type map
+$font-weight-data: (
+    base: (
+        'light': 300,
+        'regular': 400,
+        'medium': 600,
+        'bold': 700
+    )
+);
+
 /// Line height data
 /// Line height values for main text block types on mobile (base) and large screens.
 /// 
@@ -119,4 +133,37 @@ $font-size-data: (
     } @else {
         @error 'Font size `#{$style} - #{$variant}` not found. Available font sizes: #{available-names($line-height-data)}';
     }
+}
+
+/// Returns the font size for a given text style and variant.
+///
+/// @param {String} $variant [base] - The font style.
+/// @param {String} $family - The variant on the font-weight.
+/// @return {Number} The font-size for the text-style.
+/// Hardcoded for 'base' font weights
+/// Todo: Extend for other typefaces
+@function font-weight($variant, $family: 'base') {
+    $fetched-font-weight: map-get(map-get($font-weight-data, $family), $variant);
+
+    @if type-of(fetched-font-weight) != null {
+        @return $fetched-font-weight;
+    } @else {
+        @error 'Font weight `#{$style} - #{$variant}` not found. Available font weight: #{available-names($fetched-font-weight)}';
+    }
+}
+
+/// Setting up multiline ellipsis for a given line height and number of lines to show.
+///
+/// @param {String} $line-height - Line height of the text block.
+/// @param {String} $lines-to-show - Maximum number of lines to show.
+/// @return {Number} The font-size for the text-style.
+@mixin multiline-ellipsis($line-height, $lines-to-show:1) {
+	display: block;
+	display: -webkit-box;
+	line-height: ($line-height);
+	height: ($line-height * $lines-to-show);
+	-webkit-line-clamp: $lines-to-show;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+    text-overflow: ellipsis;
 }

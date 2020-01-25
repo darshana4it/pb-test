@@ -1,0 +1,22 @@
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.icon {
+    display: inline-block;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    pointer-events: none;
+}
+
+/// Generates sizes for svg icons
+/// Can be used by .icon-size-{size}
+$svg-icon-sizes: map-get($icon-sizes, 'base');
+
+@each $size, $value in $svg-icon-sizes {
+    .icon-size--#{$size} {
+        height: $value;
+        width: $value;
+    }
+}

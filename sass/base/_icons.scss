@@ -1,0 +1,54 @@
+/// Icon sizes for SVG sprites
+/// 
+/// @type map
+/// Todo: Move to design tokens
+$icon-sizes: (
+    base: (
+        'xs': 16px,
+        'small': 28px,
+        'base': 36px,
+        'large': 48px,
+        'xl': 64px,
+    )
+);
+
+
+/// Returns the SVG icon sizes
+///
+/// @param {String} $value - The darkness/lightness of the color. Defaults to base.
+/// @return {Color} The color value.
+@function icon-size($value: base) {
+    $fetched-value: map-get($icon-sizes, 'base');
+
+    @if $fetched-value != null {
+        @return $fetched-value;
+    } @else {
+        @error 'Icon size `#{$value}` not found. Available icon sizes: #{available-names($icon-sizes)}';
+    }
+}
+
+@mixin recolor-icon($fill-color, $secondary-color: null, $filter-color: null) {
+    svg {
+        fill: $fill-color;
+
+        @if $secondary-color != null {
+            color: $secondary-color;
+        }
+    }
+
+    @if $filter-color != null {
+        img {
+            filter: $filter-color;
+        }
+    }
+}
+
+@mixin color-icon($value, $hue: base) {
+    svg {
+        fill: color($value, $hue);
+    }
+
+    img {
+        filter: filter($value, $hue);
+    }
+}
