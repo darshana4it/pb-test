@@ -1,0 +1,23 @@
+/// DOM base styles
+/// 
+/// @type map
+///
+/// Note: Font size of html is set to 62.5% so that all the REM measurements throughout are based on 10px sizing.
+/// Todo: Need to be refactored
+html {
+	font-size: 62.5%;
+}
+body {
+	color: color('ink');
+	background-color: color('ui', 'lightest');
+	font-size: font-size('body'); /* currently ems cause chrome bug misinterpreting rems on body element */
+	line-height: 1.6;
+	font-weight: 400;
+	font-family: font-family('base');
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: grayscale;
+	font-smoothing: antialiased;
+}
+*, *:before, *:after {
+	box-sizing: border-box;
+}

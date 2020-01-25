@@ -1,0 +1,29 @@
+/// Base font sizes for heading tags
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+	margin-bottom: 1.5rem;
+}
+
+/// Action caption styles
+.action-caption {
+    font-weight: font-weight('bold');
+    letter-spacing: rem(1px);
+    text-transform: uppercase;
+}
+
+/// Base list styles resetting
+/// Todo: Need to be moved and extended as a separate component
+ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/// Links and flat link settings
+/// Todo: Need to be moved and extended as a separate component
+a {
+	color: color('brand');
+	&.flat-link {
+		color: inherit;
+		text-decoration: none;
+	}
+}

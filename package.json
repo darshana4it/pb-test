@@ -1,0 +1,23 @@
+{
+  "name": "pastbook-test",
+  "version": "1.0.0",
+  "description": "Test written for Pastbook technical assignment",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darshana4it/pb-test.git"
+  },
+  "author": "Darshana Gunawardana",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/darshana4it/pb-test/issues"
+  },
+  "homepage": "https://github.com/darshana4it/pb-test#readme",
+  "dependencies": {
+    "bootstrap-4-grid": "^3.2.0",
+    "jquery": "^3.4.1",
+    "normalize.css": "^8.0.1"
+  }
+}

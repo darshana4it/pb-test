@@ -1,0 +1,71 @@
+/// Color data
+/// Primary color palette incorporating Pastbook brand colors
+/// 
+/// @type map
+/// Todo: Move to design tokens
+/// $color-palette-data: $primary-colors;
+$primary-colors: (
+    'brand': (
+        'base': rgb(144,99,205),
+        'yellow': rgb(255,205,0),
+        'teal': rgb(0,193,216),
+        'pink': rgb(231,130,169),
+        'white': white,
+        'black': black,
+    ),
+    'ui': (
+        'darkest': rgb(11,11,11),
+        'darker': rgb(44,46,45),
+        'dark': rgb(78,81,79),
+        'base': rgb(111,115,113),
+        'light': rgb(169,171,170),
+        'lighter': rgb(226,227,227),
+        'lightest': rgb(243,245,249),
+    ),
+    'ink': (
+      'base': rgb(52,67,86),
+      'light': rgb(69, 79, 91),
+      'lighter': rgb(99, 115, 129),
+      'lightest': white,
+    )
+);
+
+// Mapping from Pastbook Design Tokens (Todo)
+$color-palette-data: $primary-colors;
+
+
+/// Returns the color value for a given color name and group.
+///
+/// @param {String} $hue - The colors hue.
+/// @param {String} $value - The darkness/lightness of the color. Defaults to base.
+/// @param {Color} $for-background - The background color on which this color will appear. Applies a multiply filter to ensure appropriate contrast.
+/// @return {Color} The color value.
+@function color($hue, $value: base) {
+    $return-color: map-get(map-get($color-palette-data, $hue), $value);
+  
+    @if map-has-key($color-palette-data, $return-color) {
+        $return-color: map-get(
+            map-get($color-palette-data, $return-color),
+            $value
+        );
+    }
+  
+    @if type-of($return-color) == color {
+        @return $return-color;
+    } @else {
+        $error: "Color not found. Make sure arguments are strings. GOOD - color('yellow') BAD - color(yellow)";
+        @error $error;
+    }
+}
+
+/// Returns the text color for a given color based on the lightness.
+///
+/// @param {String} $value - The background colors.
+/// @return {Color} The color value for text.
+@function text-color($value) {
+    @if (lightness($value) > 60) {
+        @return color('ink'); // Lighter backgorund, return dark color
+    } @else {
+        @return color('ink', 'lightest'); // Darker background, return light color
+    }
+}
