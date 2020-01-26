@@ -8,11 +8,19 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 1.5rem;
 }
 
+.meta {
+	font-size: font-size('caption');
+	line-height: line-height('caption');
+}
+
 /// Action caption styles
 .action-caption {
     font-weight: font-weight('bold');
     letter-spacing: rem(1px);
-    text-transform: uppercase;
+	text-transform: uppercase;
+	&--small {
+		font-size: font-size('caption');
+	}
 }
 
 /// Links and flat link settings

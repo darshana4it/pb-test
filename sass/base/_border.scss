@@ -3,18 +3,6 @@ $border-width-data: (
     thick: rem(2px),
     thicker: rem(3px),
 );
-    
-$border-radius-data: (
-    base: 4px,
-    large: 6px,
-);
-        
-$borders-data: (
-    // light: border-width() solid color('ui', 'lighterr'),
-    // base: border-width() solid color('ui'),
-    // dark: border-width() solid color('ui', 'dark'),
-    // transparent: border-width() solid transparent,
-);
 
 /// Returns the width of the specified border type.
 /// @param {String} $variant [base] - The border variant key.
@@ -28,6 +16,11 @@ $borders-data: (
         @error 'Border width variant `#{$variant}` not found. Available variants: #{available-names($border-width-data)}';
     }
 }
+    
+$border-radius-data: (
+    base: 4px,
+    large: 6px,
+);
 
 /// Returns the border radius of the specified size.
 /// @param {String} $size - The border radius’s size.
@@ -35,6 +28,13 @@ $borders-data: (
 @function border-radius($size: base) {
     @return map-get($border-radius-data, $size);
 }
+        
+$borders-data: (
+    light: border-width() solid color('ui', 'lighter'),
+    base: border-width() solid color('ui'),
+    dark: border-width() solid color('ui', 'dark'),
+    transparent: border-width() solid transparent,
+);
 
 /// Returns the default border.
 /// @param {String} $variant [base] - The border variant key.

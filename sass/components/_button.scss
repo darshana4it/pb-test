@@ -1,0 +1,161 @@
+
+// Button base
+@mixin button-base() {
+    $btn-min-height: control-height('base');
+    $vertical-padding: (rem($btn-min-height) - rem(line-height(body)) - rem(2px)) / 2;
+
+    position: relative;
+    display: inline-flex;
+    font-size: font-size('button');
+    
+    align-items: center;
+    justify-content: center;
+
+    min-height: $btn-min-height;
+    min-width: $btn-min-height;
+
+    margin: 0;
+    padding: $vertical-padding spacing();
+
+    background: color('brand', 'white');
+    border: border(transparent);
+    border-radius: border-radius();
+
+    color: color('ink');
+    line-height: 1;
+    
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    
+    text-decoration: none;
+    text-transform: uppercase;
+    transition-property: background, border;
+    transition-duration: duration();
+    transition-timing-function: easing();
+    -webkit-tap-highlight-color: transparent;
+
+    &:hover {
+        background: darker(color('ui', 'light'), .5);
+        border: border('light');
+    }
+
+    &:focus {
+        border-color: color('brand');
+        outline: 0;
+        // box-shadow: 0 0 0 1px color('brand');
+    }
+
+    &:active {
+        // Same color gradient is necessary for background transitions
+        // background: lighter($button-color, .2);
+        // border-color: darker($button-color, .3);
+    }
+}
+
+// Disabled styles for base button
+@mixin button-base-disabled {
+    // @include color-icon(color('ui', 'lighter'));
+    transition: none;
+    background: color('ui', 'lightest');
+    color: color('ui', 'lighter');
+}
+
+// Button filled mixin
+@mixin button-filled($button-color, $focus-color, $outline-color: null) {
+    $border-color: $button-color;
+    $active-color: darken($button-color, 15%);
+
+    background: $button-color;
+    border-color: $border-color;
+    box-shadow: inset 0 1px 0 0 lighten($button-color, 3%), shadow(faint), 0 0 0 0 transparent;
+    color: color('brand', 'white');
+
+    &:hover {
+        background: darken($button-color, 5%);
+        border-color: $border-color;
+        color: color('brand', 'white');
+        text-decoration: none;
+    }
+
+    &:focus {
+        border-color: $focus-color;
+        box-shadow: inset 0 1px 0 0 lighten($button-color, 5%), shadow(faint),
+            0 0 0 1px $focus-color;
+    }
+
+    &:active {
+        background: $border-color;
+        border-color: $active-color;
+        box-shadow: inset 0 0 0 0 transparent, shadow(faint),
+            0 0 1px 0 $active-color;
+    }
+}
+
+
+.button {
+    @include button-base();
+    &:disabled {
+        @include button-base-disabled();
+    }
+    
+    // Button layout
+    .button__content {
+        display: flex;
+        align-items: center;
+        .button__text {}
+        .button__icon {
+            .icon {
+                display: flex;
+                height: icon-size('xs');
+                width: icon-size('xs');
+            }
+        }
+        .button__text + .button__icon {
+            margin-left: spacing('extra-tight');
+        }
+    }
+
+    &.button--full-width {
+        display: flex;
+        width: 100%;
+    }
+    &.button--tab {
+        &.active {
+            font-weight: font-weight('bold');
+        }
+    }
+    
+    &.button--primary {
+        @include button-filled(color('brand'), color('ui', 'darker'), color('brand'));
+    }
+    &.button--gray {
+        @include button-filled(color('ui', 'light'), color('ui', 'darker'), color('ui'));
+    }
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    &.button-group--segmented {
+        margin-top: 0;
+        margin-left: 0;
+        .button-group__item {
+            position: relative;
+            margin-right: .2rem;
+        }
+        .button {
+            border-radius: 0;
+        }
+        >:first-child .button {
+            border-top-left-radius: border-radius();
+            border-bottom-left-radius: border-radius();
+        }
+        >:last-child .button {
+            border-top-right-radius: border-radius();
+            border-bottom-right-radius: border-radius();
+            margin-right: 0;
+        }
+    }
+}

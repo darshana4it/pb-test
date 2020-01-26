@@ -16,7 +16,7 @@
         <div class="card card--round card--full-height">
 
             <!-- Card common content starts -->
-            <div class="grid-container container">
+            <div class="card-grid-container container">
                 <div class="card__notch-fixer"></div>
 
                 <div class="titlebar">
@@ -32,27 +32,59 @@
                 <div class="row text-center">
                     <div class="col d-flex align-items-center justify-content-center">
                         <a href="#card-container--moments" class="card--action d-flex align-items-center justify-content-center">
-                            <div class="book"> <!--book--cover-open --> 
+
+                            <!-- photobook cover preview -->
+                            <div class="book">  
                                 <div class="front-cover">
                                     <div class="photo-grid-container photo-grid-style-1">
                                         <div class="photo-grid-row">
-                                            <div class="photo-container photo-size-1"></div>
-                                            <div class="photo-container photo-size-1"></div>
-                                            <div class="photo-container photo-size-1"></div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <div class="photo-container"></div>
+                                            </div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <!-- <div class="photo-container"></div> -->
+                                            </div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <div class="photo-container"></div>
+                                            </div>
                                         </div>
                                         <div class="photo-grid-row">
-                                            <div class="photo-container photo-size-1"></div>
-                                            <div class="photo-container photo-size-1"></div>
-                                            <div class="photo-container photo-size-1"></div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <div class="photo-container"></div>
+                                            </div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <div class="photo-container"></div>
+                                            </div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <div class="photo-container"></div>
+                                            </div>
                                         </div>
                                         <div class="photo-grid-row">
-                                            <div class="photo-container photo-size-1"></div>
-                                            <div class="photo-container photo-size-1"></div>
-                                            <div class="photo-container photo-size-1"></div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <div class="photo-container"></div>
+                                            </div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <div class="photo-container"></div>
+                                            </div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <div class="photo-container"></div>
+                                            </div>
+                                        </div>
+                                        <div class="photo-grid-row">
+                                            <div class="photo-column photo-column--size-1">
+                                                <!-- <div class="photo-container"></div> -->
+                                            </div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <div class="photo-container"></div>
+                                            </div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <!-- <div class="photo-container"></div> -->
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+
                         </a>
                     </div>
                 </div>
@@ -67,21 +99,23 @@
     <section id="card-container--moments" class="card-container card-container--inactive card-container--sticked-to-bottom">
         <div class="card card--action card--round text-center d-flex align-items-start justify-content-center">
 
-            <div class="grid-container container">
+            <div class="card-grid-container container">
 
                 <!-- Card inactive content starts -->
-                <div class="row show-on-card-inactive">
-                    <a class="card--action card--action-size-fix card--round text-center bg--white d-flex align-items-center justify-content-center flat-link" href="#card-container--moments" data-blur="true">
-                        <svg class="icon icon-size--base mr-2"><use xlink:href="/images/pb-icons.svg#layouts" /></svg>
-                        <span class="action-caption">Open Your Book</span>
-                    </a>
+                <div class="show-on-card-inactive">
+                    <div class="row">
+                        <a class="card--action card--action-size-fix card--round text-center bg--white d-flex align-items-center justify-content-center flat-link" href="#card-container--moments" data-blur="true">
+                            <svg class="icon icon-size--base mr-2"><use xlink:href="/images/pb-icons.svg#layouts" /></svg>
+                            <span class="action-caption">Open Your Book</span>
+                        </a>
+                    </div>
                 </div>
                 <!-- Card inactive content ends -->
 
                 <!-- Card active content starts -->
-                <div class="show-on-card-active">
+                <div class="show-on-card-active d-flex flex-wrap">
                     
-                    <div class="row">
+                    <div class="row align-self-start">
                         <div class="col-12">
                             <div class="card__notch-fixer"></div>
                         </div>
@@ -93,9 +127,17 @@
                         </div>
                     </div>
 
-                    <div class="row text-center show-on-card-active">
-                        <div class="col d-flex align-items-center justify-content-center">
-                            <div id="bestOf2019photobook" class="book" data-page="1"> <!--book--cover-open --> 
+                    <div class="row text-center align-self-center">
+                        <div class="col-12 d-flex justify-content-center">
+                            <div class="button-group button-group--segmented">
+                                <div class="button-group__item"><a class="button button--tab active"><span class="button__content">   <span class="button__text">Edit</span></span></a></div>
+                                <div class="button-group__item"><a class="button button--tab"><span class="button__content">  <span class="button__text">Preview</span></span></a></div>
+                            </div>
+                        </div>
+                        <div class="col-12 d-flex align-items-center justify-content-center py-5">
+
+                            <!-- Photobook starts -->
+                            <div id="bestOf2019photobook" class="book" data-page="1">  
                                 <div class="back-cover"></div>
                                 <div class="page page6"></div>
                                 <div class="page page5"></div>
@@ -106,46 +148,81 @@
                                 <div class="front-cover book--action">
                                     <div class="photo-grid-container photo-grid-style-1">
                                         <div class="photo-grid-row">
-                                            <div class="photo-container">
-                                                <div class="photo-size-1"></div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <div class="photo-container"></div>
                                             </div>
-                                            <div class="photo-container">
-                                                <div class="photo-size-1"></div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <!-- <div class="photo-container"></div> -->
                                             </div>
-                                            <div class="photo-container">
-                                                <div class="photo-size-1"></div>
-                                            </div>
-                                        </div>
-                                        <div class="photo-grid-row">
-                                            <div class="photo-container">
-                                                <div class="photo-size-1"></div>
-                                            </div>
-                                            <div class="photo-container">
-                                                <div class="photo-size-1"></div>
-                                            </div>
-                                            <div class="photo-container">
-                                                <div class="photo-size-1"></div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <div class="photo-container"></div>
                                             </div>
                                         </div>
                                         <div class="photo-grid-row">
-                                            <div class="photo-container">
-                                                <div class="photo-size-1"></div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <div class="photo-container"></div>
                                             </div>
-                                            <div class="photo-container">
-                                                <div class="photo-size-1"></div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <div class="photo-container"></div>
                                             </div>
-                                            <div class="photo-container">
-                                                <div class="photo-size-1"></div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <div class="photo-container"></div>
+                                            </div>
+                                        </div>
+                                        <div class="photo-grid-row">
+                                            <div class="photo-column photo-column--size-1">
+                                                <div class="photo-container"></div>
+                                            </div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <div class="photo-container"></div>
+                                            </div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <div class="photo-container"></div>
+                                            </div>
+                                        </div>
+                                        <div class="photo-grid-row">
+                                            <div class="photo-column photo-column--size-1">
+                                                <!-- <div class="photo-container"></div> -->
+                                            </div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <div class="photo-container"></div>
+                                            </div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <!-- <div class="photo-container"></div> -->
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Photobook ends -->
+
+                        </div>
+                        <div class="col-12 d-flex justify-content-center">
+                            <div class="button-group button-group--segmented">
+                                <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__icon"><svg class="icon"><use xlink:href="/images/pb-icons.svg#control-first" /></svg></span></span></a></div>
+                                <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__icon"><svg class="icon"><use xlink:href="/images/pb-icons.svg#control-back" /></svg></span></span></a></div>
+                                <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__text">{c} of {t} pages</span></span></a></div>
+                                <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__icon"><svg class="icon"><use xlink:href="/images/pb-icons.svg#control-next" /></svg></span></span></a></div>
+                                <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__icon"><svg class="icon"><use xlink:href="/images/pb-icons.svg#control-last" /></svg></span></span></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="row align-self-end">
+                        <div class="card--action card--action-size-fix card--action-tabs checkout-button-pad-fix card--round text-center bg--white d-flex align-items-center justify-content-center">
+                            <div class="col-6">
+                                <svg class="icon icon-size--base"><use xlink:href="/images/pb-icons.svg#photos" /></svg>
+                                <div class="action-caption action-caption--small">Photos</div>
+                            </div>
+                            <div class="col-6">
+                                <svg class="icon icon-size--base"><use xlink:href="/images/pb-icons.svg#layouts" /></svg>
+                                <div class="action-caption action-caption--small">Layouts</div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <!-- Card active content ends -->
-
             </div>
 
         </div>
@@ -159,10 +236,10 @@
             <!-- Card inactive content starts -->
             <div class="show-on-card-inactive">
                 <a class="card--action card--round text-center bg--base d-flex align-items-center justify-content-center flat-link card--action-size-fix p-3" href="#card-container--checkout" data-blur="true">
-                    <svg class="icon icon-size--xl mr-2"><use xlink:href="/images/pb-icons.svg#photos"/></svg>
+                    <svg class="icon icon-size--xl mr-2"><use xlink:href="/images/pb-icons.svg#cart"/></svg>
                     <span class="text-left">
                         <span class="action-caption d-block">Checkout & Save 40% Now!</span>
-                        <span class="meta">Offer ends in 1 hour 6 minutes</span>
+                        <span class="meta text-uppercase">Offer ends in 1 hour 6 minutes</span>
                     </span>
                 </a>
             </div>
@@ -171,7 +248,7 @@
             <!-- Card active content starts -->
             <div class="show-on-card-active">
                 
-                <div class="grid-container container">
+                <div class="card-grid-container container">
                     <div class="row">
                         <div class="col-12">
                             <div class="card__notch-fixer"></div>
@@ -197,6 +274,6 @@
 </body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript" src="./js/cardTransition.js"></script>
-<script type="text/javascript" src="./js/photobook.js"></script>
+<script type="text/javascript" src="./js/photobookTransition.js"></script>
 <script type="text/javascript" src="./js/functions.js"></script>
 </html>

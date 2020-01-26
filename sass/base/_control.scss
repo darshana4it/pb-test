@@ -1,0 +1,30 @@
+/// Control data
+/// 
+/// @type map
+/// Todo: Move to design tokens
+$control-height-data: (
+    'base': (
+        'slim': 28px,
+        'base': 36px,
+        'large': 44px,
+    ),
+    'large-screen': (
+        'slim': 28px,
+        'base': 36px,
+        'large': 44px,
+    )
+);
+
+/// Returns the control height for a given variant.
+///
+/// @param {String} $variant [base] - The key for the given variant.
+/// @return {Number} The spacing for the variant.
+@function control-height($variant: base, $screen: base) {
+    $fetched-height: map-get(map-get($control-height-data, $screen), $variant);
+
+    @if type-of($fetched-height) == number {
+        @return rem($fetched-height);
+    } @else {
+        @error 'Control height data `#{$variant}` not found. Available variants: #{available-names($control-height-data)}';
+    }
+}

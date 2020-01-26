@@ -69,6 +69,13 @@ $card-transition-duration: 500ms;
         max-height: 100vh !important;
         .card {
             height: 100vh;
+            .card-grid-container {
+                &, .show-on-card-active {
+                    margin-top: -$card-padding;
+                    padding-top: $card-padding;
+                    height: 100vh;
+                }
+            }
         }
         .show-on-card-inactive {
             max-height: 0;
