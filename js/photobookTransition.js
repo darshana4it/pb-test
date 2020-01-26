@@ -76,7 +76,6 @@
                 bookOpen = true;
             }
         }
-        init();
         
         return this;
     };
@@ -93,5 +92,4 @@ $(window).on("load", photobookResizer(
 ));
 
 $(document).ready(function() {
-    $(".book--action").photobookTransitions();
 });

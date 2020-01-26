@@ -1,0 +1,18 @@
+/// Custom cards component for mobile transitions
+///
+/// Defines card based page transitions on Pastbook mobile experience
+
+/// Scoping for mobile
+@include media-breakpoint-down(sm) {
+    @import "base/animation";
+    @import "base/layout";
+    @import "base/functions";
+    
+    @import "modules/moments";
+    @import "modules/checkout";
+}
+
+/// Card adjustments for desktop
+@include media-breakpoint-up(md) {
+    @import "base/desktop";
+}

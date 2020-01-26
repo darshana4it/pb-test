@@ -19,3 +19,9 @@ body {
 *, *:before, *:after {
 	box-sizing: border-box;
 }
+
+@include media-breakpoint-down(sm) {
+	.container {
+		max-width: 100%;
+	}
+}

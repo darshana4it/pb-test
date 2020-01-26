@@ -11,18 +11,21 @@
 <!-- Card wrapper starts -->
 <div class="card-wrapper">
     
-    <!-- Landing card starts -->
-    <section id="card-container--landing" class="card-container card-container--focus card-container--active">
-        <div class="card card--round card--full-height">
+    <!-- Landing card starts: Mobile only -->
+    <section id="card-container--landing" class="card-container card-container--focus card-container--active d-md-none">
+        <div class="card card--action card--round card--full-height text-center d-flex align-items-start justify-content-center">
 
             <!-- Card common content starts -->
             <div class="card-grid-container container">
                 <div class="card__notch-fixer"></div>
-
-                <div class="titlebar">
-                </div>
             
                 <div class="row text-center">
+                    <div class="col-12">
+                        <div class="titlebar">
+                            <a href="#" class="card--action titlebar__action"><svg class="icon titlebar__icon mr-auto"><use xlink:href="/images/pb-icons.svg#back" /></svg></a>
+                            <div class="titlebar__title"><span class="text-center"></span></div>
+                        </div>
+                    </div>
                     <div class="col">
                         <h1>Hi John,</h1>
                         <h3>We made this picure book from your beautiful memories from 2019</h3>
@@ -113,13 +116,13 @@
                 <!-- Card inactive content ends -->
 
                 <!-- Card active content starts -->
-                <div class="show-on-card-active d-flex flex-wrap">
+                <div class="col-md-6 show-on-card-active d-flex flex-wrap justify-content-center">
                     
                     <div class="row align-self-start">
                         <div class="col-12">
                             <div class="card__notch-fixer"></div>
                         </div>
-                        <div class="col-12">
+                        <div class="col-12 d-md-none">
                             <div class="titlebar">
                                 <a href="#card-container--landing" class="card--action titlebar__action"><svg class="icon titlebar__icon mr-auto"><use xlink:href="/images/pb-icons.svg#back" /></svg></a>
                                 <div class="titlebar__title"><span class="text-center">Best Moments of 2019</span></div>
@@ -210,7 +213,7 @@
                     
 
                     <div class="row align-self-end">
-                        <div class="card--action card--action-size-fix card--action-tabs checkout-button-pad-fix card--round text-center bg--white d-flex align-items-center justify-content-center">
+                        <div class="card--action card--action-size-fix card--action-tabs checkout-button-pad-fix card--round text-center bg--white d-flex align-items-center justify-content-center d-md-none">
                             <div class="col-6">
                                 <svg class="icon icon-size--base"><use xlink:href="/images/pb-icons.svg#photos" /></svg>
                                 <div class="action-caption action-caption--small">Photos</div>
@@ -229,8 +232,8 @@
     </section>
     <!-- Moments card ends -->
     
-    <!-- Checkout card starts -->
-    <section id="card-container--checkout" class="card-container card-container--inactive card-container--sticked-to-bottom">        
+    <!-- Checkout card starts: Mobile only -->
+    <section id="card-container--checkout" class="card-container card-container--inactive card-container--sticked-to-bottom d-md-none">        
 
         <div class="card">
             <!-- Card inactive content starts -->

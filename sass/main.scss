@@ -19,9 +19,10 @@
 @import "components/typography";
 @import "components/icons";
 @import "components/button";
-@import "components/titlebar";
-@import "components/card/card";
 @import "components/photobook/book";
+
+@import "components/mobile/titlebar";
+@import "components/mobile/card/card";
 
 @import "pages/landing";
 @import "pages/moments";

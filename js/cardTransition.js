@@ -110,11 +110,3 @@ function inactiveActionCardPadding() {
     setupActionPosition(checkoutContainer);
     setupActionPosition(momentsContainer);
 }
-
-// Inactive action card positioning on load
-$(window).on("load", inactiveActionCardPadding());
-
-// Card action manager
-$(document).ready(function() {
-    $("a.card--action").cardTransitions();
-});

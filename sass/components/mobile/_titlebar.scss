@@ -4,7 +4,8 @@
 $titlebar-height: 3rem;
 $titlebar-icon-size: icon-size('xs');
 
-.titlebar {
+.titlebar {	
+    /// Scoping for mobile
     color: color('ink');
     display: flex;
     align-items: center;
@@ -30,5 +31,9 @@ $titlebar-icon-size: icon-size('xs');
             text-align: center;
             width: 100%;
         }
+    }
+    
+    @include media-breakpoint-up(md) {
+        display: none;
     }
 }
