@@ -1,10 +1,13 @@
 /// Card layout
+///
+/// Global card layout styles
 $card-radius: rem(55px);
 $card-wrapper-bg: color('ui', 'darker');
 $card-padding: rem(30px);
 $blur-transform: scale(0.9);
 $card-transition-duration: 500ms;
 
+// Card wrapper 
 .card-wrapper {
     background-color: $card-wrapper-bg;
     position: relative;
@@ -38,9 +41,12 @@ $card-transition-duration: 500ms;
     height: 100vh;
     width: 100%;
 
+    // Focused card
     &--focus {
         background-color: color('ui', 'lightest');
     }
+
+    // 
     &--blur {
         transform: $blur-transform;
         transform-origin: bottom;
@@ -50,11 +56,14 @@ $card-transition-duration: 500ms;
             background-color: white;
         }
     }
+
+
     .show-on-card-inactive, .show-on-card-active {
         opacity: 1;
         max-height: 100vh;
         transition: opacity ease-in-out 200ms;
     }
+
     &--active {
         top: 0 !important;
         max-height: 100vh !important;

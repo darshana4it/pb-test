@@ -37,6 +37,7 @@
             dataBlur = false;
         };
 
+        // Card transition
         function nextCardSwitch(options) {
             init();
             nextCard = $(options.$nc);
@@ -89,8 +90,7 @@ function inactiveActionCardPadding() {
         documentHeight = $(document).height(),
         viewportHeight = $(window).height();
 
-    // console.log('document: ' + documentHeight + '| window: ' + viewportHeight);
-
+    
     function setupActionPosition(target) {
         var targetAction = $(target).children(cardActionTrigger),
         actionHeight = 0;

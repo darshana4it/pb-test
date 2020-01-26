@@ -5,8 +5,8 @@ $cover-background: #2C2C2C;
 $book-height: 290px;
 $book-width: 280px;
 
+// Standard book closed
 .book {
-    transform-style: preserve-3d;
     position: relative;
     width: $book-width;
     height: $book-height;
@@ -14,6 +14,7 @@ $book-width: 280px;
     backface-visibility: visible;
 }
 
+// Front cover, back cover and page styles
 .front-cover, .back-cover, .page {
     position: absolute;
     top: 0; left: 0;
@@ -23,15 +24,15 @@ $book-width: 280px;
     height: 100%;
     width: $book-width;
 }
-  
 .front-cover, .back-cover {
     background: $cover-background;
 }
-
 .page {
     background-color: #fff;
 }
 
+// Front cover shadow
+// To enable/ disable dyamically, this can be implemented as a variant (eg .front-cover--has-shadow)
 .front-cover {
     box-shadow: inset 0px 0px 8px rgba(0, 0, 0, 0.05);
     &:after {

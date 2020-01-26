@@ -1,4 +1,8 @@
-/// Card transitions
+/// Card animations
+///
+/// Different transitions can be implemented by passing current different animation attributes to...
+/// ...current card, next card on card focus, blur states through the card component
+
 /// Next card comes to focus
 .card-moveFromBottom {
 	-webkit-animation: moveFromBottom .6s ease both;
@@ -12,7 +16,6 @@
 	from { -webkit-transform: translateY(100%); transform: translateY(100%); }
 }
 
-/// Card transitions
 /// Current card becomes blur
 .card-scaleDown {
 	-webkit-animation: scaleDown .7s ease both;

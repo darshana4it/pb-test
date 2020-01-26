@@ -54,6 +54,7 @@
             (options.$currentPage) ? currentPage = $(options).$pbName.data('page') : currentPage = 1;
         }
 
+        // Cover/ page turn
         function turn() {
             if (photobookId.hasClass(bookOpenClass)) {
                 bookOpen = true;

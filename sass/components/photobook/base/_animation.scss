@@ -8,28 +8,43 @@ $turned-cover-scale: scale(1.1);
 $turned-page-scale: scale(1.07, 1.05); // Todo: Js based fix required to scale accurately
 
 .book {
-    position: absolute;
-    transition: all $transition-duration;
+    transform-style: preserve-3d;
+
+    // Photo grid global container
+    &, .photo-grid-container {
+        transition: all $transition-duration;
+    }
+
+    // Front cover open state
     &--cover-open {
         max-width: auto;
+
+        // Front cover turns
         .front-cover {
             background: #C9CDD4;
             box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
             transform: $page-rotate $turned-cover-scale;
             transition: all $transition-duration;
+
+            // Photo grid hides
+            .photo-grid-container {
+                opacity: 0;
+            }
             &:after {
                 opacity: 0;
             }
         }
+
+        // Back cover (inside) color appears
         .back-cover {
             background: #ACB1B9;
             transform: rotateY(-0deg) $turned-cover-scale;
             transition: all $transition-duration;
         }
 
+        // Page after front cover open
         .page {
             transform: $turned-page-scale;
-
             &--turned {
                 box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
                 transform: $page-rotate $turned-page-scale;
@@ -37,17 +52,14 @@ $turned-page-scale: scale(1.07, 1.05); // Todo: Js based fix required to scale a
             }
         }
     }
+
     .page {
         transition: all $transition-duration;
     }
 
-
+    // Focusing photobook viewport to the left page on mobile
     &--focus-left-page {
         left: 50%;
         transform: translateX(50%);
     }
-    // &--focus-right-page {
-    //     left: -50%;
-    //     transform: translateX(-50%);
-    // }
 }
