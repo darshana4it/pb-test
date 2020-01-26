@@ -98,134 +98,157 @@
     </section>
     <!-- Landing card ends -->
 
+    <section>
+        <div class="navbar d-none d-md-block">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 d-flex align-items-center">
+                        <a href="#" class="navbar__brand"><img src="./images/logo.png" alt=""></a>
+                        
+                        <div class="navbar__links d-flex ml-auto">
+                            <a href="#" class="button button--gray button--large mr-3">Share</a>
+                            <a href="#" class="button button--primary button--large">Checkout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Moments card starts -->
     <section id="card-container--moments" class="card-container card-container--inactive card-container--sticked-to-bottom">
+
         <div class="card card--action card--round text-center d-flex align-items-start justify-content-center">
 
-            <div class="card-grid-container container">
-
-                <!-- Card inactive content starts -->
-                <div class="show-on-card-inactive">
-                    <div class="row">
+            <div class="card-grid-container container-fluid">
+                <div class="row"> 
+                    <!-- Card inactive content starts -->
+                    <div class="show-on-card-inactive">
                         <a class="card--action card--action-size-fix card--round text-center bg--white d-flex align-items-center justify-content-center flat-link" href="#card-container--moments" data-blur="true">
                             <svg class="icon icon-size--base mr-2"><use xlink:href="/images/pb-icons.svg#layouts" /></svg>
                             <span class="action-caption">Open Your Book</span>
                         </a>
                     </div>
-                </div>
-                <!-- Card inactive content ends -->
+                    <!-- Card inactive content ends -->
 
-                <!-- Card active content starts -->
-                <div class="col-md-6 show-on-card-active d-flex flex-wrap justify-content-center">
-                    
-                    <div class="row align-self-start">
-                        <div class="col-12">
-                            <div class="card__notch-fixer"></div>
-                        </div>
-                        <div class="col-12 d-md-none">
-                            <div class="titlebar">
-                                <a href="#card-container--landing" class="card--action titlebar__action"><svg class="icon titlebar__icon mr-auto"><use xlink:href="/images/pb-icons.svg#back" /></svg></a>
-                                <div class="titlebar__title"><span class="text-center">Best Moments of 2019</span></div>
-                            </div>
-                        </div>
+                    <div class="col-md-4 d-none d-md-block">
+                        Controls
                     </div>
 
-                    <div class="row text-center align-self-center">
-                        <div class="col-12 d-flex justify-content-center">
-                            <div class="button-group button-group--segmented">
-                                <div class="button-group__item"><a class="button button--tab active"><span class="button__content">   <span class="button__text">Edit</span></span></a></div>
-                                <div class="button-group__item"><a class="button button--tab"><span class="button__content">  <span class="button__text">Preview</span></span></a></div>
+                    <!-- Card active content starts -->
+                    <div class="col-12 col-md-8 show-on-card-active d-flex flex-wrap justify-content-center">
+                        
+                        <div class="row align-self-start">
+                            <div class="col-12">
+                                <div class="card__notch-fixer"></div>
+                            </div>
+                            <div class="col-12 d-md-none">
+                                <div class="titlebar">
+                                    <a href="#card-container--landing" class="card--action titlebar__action"><svg class="icon titlebar__icon mr-auto"><use xlink:href="/images/pb-icons.svg#back" /></svg></a>
+                                    <div class="titlebar__title"><span class="text-center">Best Moments of 2019</span></div>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-12 d-flex align-items-center justify-content-center py-5">
 
-                            <!-- Photobook starts -->
-                            <div id="bestOf2019photobook" class="book" data-page="1">  
-                                <div class="back-cover"></div>
-                                <div class="page page6"></div>
-                                <div class="page page5"></div>
-                                <div class="page page4"></div>
-                                <div class="page page3"></div>
-                                <div class="page page2"></div>
-                                <div class="page page1 book--action"></div>
-                                <div class="front-cover book--action">
-                                    <div class="photo-grid-container photo-grid-style-1">
-                                        <div class="photo-grid-row">
-                                            <div class="photo-column photo-column--size-1">
-                                                <div class="photo-container"></div>
+                        <div class="row text-center align-self-center">
+                            <div class="col-12 d-flex justify-content-center d-md-none">
+                                <div class="button-group button-group--segmented">
+                                    <div class="button-group__item"><a class="button button--tab active"><span class="button__content">   <span class="button__text">Edit</span></span></a></div>
+                                    <div class="button-group__item"><a class="button button--tab"><span class="button__content">  <span class="button__text">Preview</span></span></a></div>
+                                </div>
+                            </div>
+                            <div class="col-12 photobook-container d-flex align-items-center justify-content-center py-5">
+
+                                <!-- Photobook starts -->
+                                <div id="bestOf2019photobook" class="book" data-page="1">  
+                                    <div class="back-cover"></div>
+                                    <div class="page page6"></div>
+                                    <div class="page page5"></div>
+                                    <div class="page page4"></div>
+                                    <div class="page page3"></div>
+                                    <div class="page page2"></div>
+                                    <div class="page page1 book--action"></div>
+                                    <div class="front-cover book--action">
+                                        <div class="photo-grid-container photo-grid-style-1">
+                                            <div class="photo-grid-row">
+                                                <div class="photo-column photo-column--size-1">
+                                                    <div class="photo-container"></div>
+                                                </div>
+                                                <div class="photo-column photo-column--size-1">
+                                                    <!-- <div class="photo-container"></div> -->
+                                                </div>
+                                                <div class="photo-column photo-column--size-1">
+                                                    <div class="photo-container"></div>
+                                                </div>
                                             </div>
-                                            <div class="photo-column photo-column--size-1">
-                                                <!-- <div class="photo-container"></div> -->
+                                            <div class="photo-grid-row">
+                                                <div class="photo-column photo-column--size-1">
+                                                    <div class="photo-container"></div>
+                                                </div>
+                                                <div class="photo-column photo-column--size-1">
+                                                    <div class="photo-container"></div>
+                                                </div>
+                                                <div class="photo-column photo-column--size-1">
+                                                    <div class="photo-container"></div>
+                                                </div>
                                             </div>
-                                            <div class="photo-column photo-column--size-1">
-                                                <div class="photo-container"></div>
+                                            <div class="photo-grid-row">
+                                                <div class="photo-column photo-column--size-1">
+                                                    <div class="photo-container"></div>
+                                                </div>
+                                                <div class="photo-column photo-column--size-1">
+                                                    <div class="photo-container"></div>
+                                                </div>
+                                                <div class="photo-column photo-column--size-1">
+                                                    <div class="photo-container"></div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="photo-grid-row">
-                                            <div class="photo-column photo-column--size-1">
-                                                <div class="photo-container"></div>
-                                            </div>
-                                            <div class="photo-column photo-column--size-1">
-                                                <div class="photo-container"></div>
-                                            </div>
-                                            <div class="photo-column photo-column--size-1">
-                                                <div class="photo-container"></div>
-                                            </div>
-                                        </div>
-                                        <div class="photo-grid-row">
-                                            <div class="photo-column photo-column--size-1">
-                                                <div class="photo-container"></div>
-                                            </div>
-                                            <div class="photo-column photo-column--size-1">
-                                                <div class="photo-container"></div>
-                                            </div>
-                                            <div class="photo-column photo-column--size-1">
-                                                <div class="photo-container"></div>
-                                            </div>
-                                        </div>
-                                        <div class="photo-grid-row">
-                                            <div class="photo-column photo-column--size-1">
-                                                <!-- <div class="photo-container"></div> -->
-                                            </div>
-                                            <div class="photo-column photo-column--size-1">
-                                                <div class="photo-container"></div>
-                                            </div>
-                                            <div class="photo-column photo-column--size-1">
-                                                <!-- <div class="photo-container"></div> -->
+                                            <div class="photo-grid-row">
+                                                <div class="photo-column photo-column--size-1">
+                                                    <!-- <div class="photo-container"></div> -->
+                                                </div>
+                                                <div class="photo-column photo-column--size-1">
+                                                    <div class="photo-container"></div>
+                                                </div>
+                                                <div class="photo-column photo-column--size-1">
+                                                    <!-- <div class="photo-container"></div> -->
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <!-- Photobook ends -->
+                                <!-- Photobook ends -->
 
+                            </div>
+                            <div class="col-12 d-flex justify-content-center">
+                                <div class="button-group button-group--segmented">
+                                    <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__icon"><svg class="icon"><use xlink:href="/images/pb-icons.svg#control-first" /></svg></span></span></a></div>
+                                    <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__icon"><svg class="icon"><use xlink:href="/images/pb-icons.svg#control-back" /></svg></span></span></a></div>
+                                    <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__text">{c} of {t} pages</span></span></a></div>
+                                    <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__icon"><svg class="icon"><use xlink:href="/images/pb-icons.svg#control-next" /></svg></span></span></a></div>
+                                    <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__icon"><svg class="icon"><use xlink:href="/images/pb-icons.svg#control-last" /></svg></span></span></a></div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-12 d-flex justify-content-center">
-                            <div class="button-group button-group--segmented">
-                                <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__icon"><svg class="icon"><use xlink:href="/images/pb-icons.svg#control-first" /></svg></span></span></a></div>
-                                <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__icon"><svg class="icon"><use xlink:href="/images/pb-icons.svg#control-back" /></svg></span></span></a></div>
-                                <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__text">{c} of {t} pages</span></span></a></div>
-                                <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__icon"><svg class="icon"><use xlink:href="/images/pb-icons.svg#control-next" /></svg></span></span></a></div>
-                                <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__icon"><svg class="icon"><use xlink:href="/images/pb-icons.svg#control-last" /></svg></span></span></a></div>
+                        
+
+                        <div class="row align-self-end">
+                            <div class="card--action card--action-size-fix card--action-tabs checkout-button-pad-fix card--round text-center bg--white d-flex align-items-center justify-content-center d-md-none">
+                                <div class="col-6">
+                                    <svg class="icon icon-size--base"><use xlink:href="/images/pb-icons.svg#photos" /></svg>
+                                    <div class="action-caption action-caption--small">Photos</div>
+                                </div>
+                                <div class="col-6">
+                                    <svg class="icon icon-size--base"><use xlink:href="/images/pb-icons.svg#layouts" /></svg>
+                                    <div class="action-caption action-caption--small">Layouts</div>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Card active content ends -->
+
                     
-
-                    <div class="row align-self-end">
-                        <div class="card--action card--action-size-fix card--action-tabs checkout-button-pad-fix card--round text-center bg--white d-flex align-items-center justify-content-center d-md-none">
-                            <div class="col-6">
-                                <svg class="icon icon-size--base"><use xlink:href="/images/pb-icons.svg#photos" /></svg>
-                                <div class="action-caption action-caption--small">Photos</div>
-                            </div>
-                            <div class="col-6">
-                                <svg class="icon icon-size--base"><use xlink:href="/images/pb-icons.svg#layouts" /></svg>
-                                <div class="action-caption action-caption--small">Layouts</div>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <!-- Card active content ends -->
             </div>
 
         </div>

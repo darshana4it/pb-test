@@ -2,7 +2,7 @@
 @import "../node_modules/normalize.css/normalize.css";
 @import "../node_modules/bootstrap-4-grid/scss/grid.scss";
 
-
+// Partials
 @import "base/utilities";
 @import "base/color";
 @import "base/typography";
@@ -13,17 +13,20 @@
 @import "base/transitions";
 @import "base/control";
 
-
+// Components
 @import "components/layout";
 @import "components/color";
 @import "components/typography";
 @import "components/icons";
 @import "components/button";
 @import "components/photobook/book";
+@import "components/navbar";
 
+// Mobile only components
 @import "components/mobile/titlebar";
 @import "components/mobile/card/card";
 
+// Pages
 @import "pages/landing";
 @import "pages/moments";
 @import "pages/checkout";

@@ -125,6 +125,10 @@
             font-weight: font-weight('bold');
         }
     }
+    &.button--large {
+        font-size: font-size('button', 'large-screen');
+        min-height: control-height('large'); 
+    }
     
     &.button--primary {
         @include button-filled(color('brand'), color('ui', 'darker'), color('brand'));

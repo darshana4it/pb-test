@@ -20,6 +20,7 @@ body {
 	box-sizing: border-box;
 }
 
+// Forced fluid width mobile container
 @include media-breakpoint-down(sm) {
 	.container {
 		max-width: 100%;

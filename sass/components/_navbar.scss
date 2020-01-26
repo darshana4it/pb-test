@@ -1,0 +1,19 @@
+$navbar-height: 7rem;
+
+.navbar {
+    background: color('brand', 'white');
+    height: $navbar-height;
+    width: 100%;
+    .navbar__brand {
+        display: flex;
+        align-items: center;
+        height: $navbar-height;
+        width: 20rem;
+        img {
+            width: 100%;
+        }
+    }
+    .navbar__links {
+
+    }
+}
