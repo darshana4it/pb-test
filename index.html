@@ -26,7 +26,7 @@
                             <div class="titlebar__title"><span class="text-center"></span></div>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class="col mt-5">
                         <h1>Hi John,</h1>
                         <h3>We made this picure book from your beautiful memories from 2019</h3>
                     </div>
@@ -106,7 +106,7 @@
                         <a href="#" class="navbar__brand"><img src="./images/logo.png" alt=""></a>
                         
                         <div class="navbar__links d-flex ml-auto">
-                            <a href="#" class="button button--gray button--large mr-3">Share</a>
+                            <a href="#" class="button button--teal button--teal--outline button--large mr-3">Share</a>
                             <a href="#" class="button button--primary button--large">Checkout</a>
                         </div>
                     </div>
@@ -121,7 +121,7 @@
         <div class="card card--action card--round text-center d-flex align-items-start justify-content-center">
 
             <div class="card-grid-container container-fluid">
-                <div class="row"> 
+                <div class="row editor-container"> 
                     <!-- Card inactive content starts -->
                     <div class="show-on-card-inactive">
                         <a class="card--action card--action-size-fix card--round text-center bg--white d-flex align-items-center justify-content-center flat-link" href="#card-container--moments" data-blur="true">
@@ -131,12 +131,72 @@
                     </div>
                     <!-- Card inactive content ends -->
 
-                    <div class="col-md-4 d-none d-md-block">
-                        Controls
+                    <div class="d-none d-md-flex toolpanel justify-content-center flex-wrap">
+                        <div class="tab-container w-100">
+                            <div class="tab-panel">
+                                <a href="#" class="tab-nav flat-link tab-nav--active" data-rel="photo-gallery-tab">
+                                    <svg class="icon icon-size--base"><use xlink:href="/images/pb-icons.svg#photos" /></svg>
+                                    <div class="tab-title">Photos</div>
+                                </a>
+                                <a href="#" class="tab-nav flat-link">
+                                    <svg class="icon icon-size--base"><use xlink:href="/images/pb-icons.svg#layouts" /></svg>
+                                    <div class="tab-title">Layouts</div>
+                                </a>
+                            </div>
+                            <div class="tab-contents container px-5">
+                                <div class="tab-content photo-gallery-tab">
+                                    <div class="toolpanel--photo-galery toolpanel--photo-galery--tile-mode row">
+                                        <div class="col-12">
+                                            <div class="row">
+                                                <div class="col action-caption photo-category-labels"><span>Photos in this page</span></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4 photo-column">
+                                                    <div class="photo-preview photo-preview--active"></div>
+                                                </div>
+                                                <div class="col-4 photo-column">
+                                                    <div class="photo-preview photo-preview--active"></div>
+                                                </div>
+                                                <div class="col-4 photo-column">
+                                                    <div class="photo-preview photo-preview--active"></div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col action-caption photo-category-labels"><span>Other photos</span></div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-4 photo-column">
+                                                    <div class="photo-preview"></div>
+                                                </div>
+                                                <div class="col-4 photo-column">
+                                                    <div class="photo-preview"></div>
+                                                </div>
+                                                <div class="col-4 photo-column">
+                                                    <div class="photo-preview"></div>
+                                                </div>
+                                                <div class="col-4 photo-column">
+                                                    <div class="photo-preview"></div>
+                                                </div>
+                                                <div class="col-4 photo-column">
+                                                    <div class="photo-preview"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>                                    
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                        <div class="row px-3 d-flex mt-auto mb-5 w-100">
+                            <div class="col-12 px-3">
+                                <button class="button button--teal button--full-width">Upload Photos from Device</button>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Card active content starts -->
-                    <div class="col-12 col-md-8 show-on-card-active d-flex flex-wrap justify-content-center">
+                    <div class="col-sm-12 show-on-card-active d-flex flex-wrap justify-content-center viewpanel">
                         
                         <div class="row align-self-start">
                             <div class="col-12">
@@ -224,7 +284,7 @@
                                 <div class="button-group button-group--segmented">
                                     <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__icon"><svg class="icon"><use xlink:href="/images/pb-icons.svg#control-first" /></svg></span></span></a></div>
                                     <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__icon"><svg class="icon"><use xlink:href="/images/pb-icons.svg#control-back" /></svg></span></span></a></div>
-                                    <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__text">{c} of {t} pages</span></span></a></div>
+                                    <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__text">page {#}</span></span></a></div>
                                     <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__icon"><svg class="icon"><use xlink:href="/images/pb-icons.svg#control-next" /></svg></span></span></a></div>
                                     <div class="button-group__item"><a class="button button--tab"><span class="button__content"><span class="button__icon"><svg class="icon"><use xlink:href="/images/pb-icons.svg#control-last" /></svg></span></span></a></div>
                                 </div>

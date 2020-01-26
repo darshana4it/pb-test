@@ -1,0 +1,44 @@
+/// Tool panel styles
+///
+/// Todo: Componentising, refactoring styles
+$toolpanel-width: rem(350px);
+
+.toolpanel {
+    background: color('brand', 'white');
+    border-right: .1rem solid color('ui', 'lighter');
+    height: 100%;
+    overflow-y: scroll;
+    width: $toolpanel-width;
+}
+.toolpanel--photo-galery {
+    padding-top: 2rem;
+    .photo-category-labels {
+        font-size: font-size('caption') - .2rem;
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+    .photo-column {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-bottom: 2rem;
+    }
+    &--tile-mode {
+        .photo-preview {
+            background-color: rgba(color('brand', 'teal'), .1);
+            background-size: cover;
+            border-radius: border-radius('large');
+            border: color('ui', 'lightest') solid .3rem;
+            height: 70px;
+            &.photo-preview--active {
+                    border-color: color('brand');
+            }
+        }
+    }
+}
+.viewpanel {
+    @include media-breakpoint-up(md) {
+        flex: 1;
+        height: 100%;
+        overflow-y: scroll;
+    }
+}

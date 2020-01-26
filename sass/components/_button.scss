@@ -92,6 +92,39 @@
     }
 }
 
+// Button outline mixin
+@mixin button-outline($outline-color, $background-color: transparent) {
+    background: $background-color;
+    border-color: rgba($outline-color, 0.6);
+    box-shadow: none;
+    // color: darken($outline-color, 20%);
+    color: $outline-color;
+  
+    &:hover {
+      background: rgba($outline-color, 0.05);
+      border-color: rgba($outline-color, 0.7);
+      color: $outline-color;
+    }
+  
+    &:focus {
+      border-color: rgba($outline-color, 0.6);
+      box-shadow: 0 0 0 1px rgba($outline-color, 0.8);
+    }
+  
+    &:active {
+      background: rgba($outline-color, 0.1);
+      box-shadow: none;
+    }
+}
+  
+@mixin button-outline-disabled($outline-color) {
+    background: transparent;
+    border-color: rgba($outline-color, 0.25);
+    box-shadow: none;
+    color: color('ink', 'lightest');
+  
+    @include color-icon(color('ink', 'lightest'));
+}
 
 .button {
     @include button-base();
@@ -127,14 +160,25 @@
     }
     &.button--large {
         font-size: font-size('button', 'large-screen');
+        font-weight: font-weight('bold');
         min-height: control-height('large'); 
+        border-width: .2rem;
     }
     
     &.button--primary {
         @include button-filled(color('brand'), color('ui', 'darker'), color('brand'));
+        &--outline {
+            @include button-outline(color('brand'));
+        }
     }
     &.button--gray {
         @include button-filled(color('ui', 'light'), color('ui', 'darker'), color('ui'));
+    }
+    &.button--teal {
+        @include button-filled(color('brand', 'teal'), color('ui', 'darker'), color('brand', 'teal'));
+        &--outline {
+            @include button-outline(color('brand', 'teal'));
+        }
     }
 }
 

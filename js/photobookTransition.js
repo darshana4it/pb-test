@@ -63,7 +63,15 @@
                     // photobookId.removeClass(leftFocusClass);
                     if(currentPage < numPages) {
                         $cpClass = pageClass + currentPage;
-                        photobookId.children($cpClass).addClass(pageTurnClass);
+                        if (currentPage % 2 === 0) {
+                            photobookId.children($cpClass).addClass(pageTurnClass)
+                            (photobookId.hasClass(leftFocusClass)) ? photobookId.removeClass(leftFocusClass) : 0;
+                        }
+                        else {
+                            photobookId.children($cpClass).addClass(pageTurnClass);
+                            photobookId.addClass(leftFocusClass);
+                        }
+
                         currentPage++;
                     }
                 }
@@ -87,15 +95,15 @@ function photobookResizer() {
     var pageWidth, pageHeight;
 
     var basePage = {
-        width: 800,
-        height: 600,
+        height: 320,
+        width: 500,
         scale: 1,
         scaleX: 1,
         scaleY: 1
     };
 
     $(function(){
-        var $page = $('.page_content');
+        var $page = $('.photobook-container');
         
         getPageSize();
         scalePages($page, pageWidth, pageHeight);
@@ -108,8 +116,8 @@ function photobookResizer() {
         
 
         function getPageSize() {
-            pageHeight = $('#container').height();
-            pageWidth = $('#container').width();
+            pageHeight = $(window).width() - $('.toolbox-panel').outerWidth();
+            pageWidth = $(window).height() - $('.navbar').outerHeight();
         }
 
         function scalePages(page, maxWidth, maxHeight) {            
@@ -123,14 +131,10 @@ function photobookResizer() {
             var newLeftPos = Math.abs(Math.floor(((basePage.width * basePage.scale) - maxWidth)/2));
             var newTopPos = Math.abs(Math.floor(((basePage.height * basePage.scale) - maxHeight)/2));
 
-            page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');left:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
+            // page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');left:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
+            page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');');
         }
     });
+
+    console.log(basePage.height);
 }
-
-$(window).on("load", photobookResizer(
-
-));
-
-$(document).ready(function() {
-});

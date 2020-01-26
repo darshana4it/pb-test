@@ -1,0 +1,36 @@
+/// Styles for a simple tabs component
+///
+/// Todo: Componentising tabs
+$tabnav-pad: rem(10px) rem(20px);
+
+.tab-container {
+    .tab-panel {
+        background: rgba(color('ui', 'lightest'), .8);
+        display: flex;
+        justify-content: center;
+    }
+    .tab-nav {
+        flex-grow: 1;
+        padding: $tabnav-pad;
+        .icon {
+            opacity: .8;
+        }
+        .tab-title {
+            font-size: font-size('caption');
+            text-transform: uppercase;
+        }
+        &.tab-nav--active {
+            background: color('brand', 'white');
+            font-weight: font-weight(bold);
+            .icon {
+                opacity: 1;
+            }
+        }
+    
+    }
+    .tab-contents {
+        .tab-content{
+            
+        }
+    }
+}

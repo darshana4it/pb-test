@@ -2,6 +2,7 @@ $navbar-height: 7rem;
 
 .navbar {
     background: color('brand', 'white');
+    border-bottom: .1rem solid color('ui', 'lighter');
     height: $navbar-height;
     width: 100%;
     .navbar__brand {
