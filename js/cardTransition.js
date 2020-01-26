@@ -1,6 +1,6 @@
-/// Card (page) transition manager
+/// Custom card (page) transition manager
 (function($) {
-    $.fn.PageTransitions = function() {
+    $.fn.cardTransitions = function() {
         var currentCard = false,
             nextCard = false,
             dataBlur = false,
@@ -18,10 +18,10 @@
 
             // animation end event name
 			animEndEventName = animEndEventNames[ Modernizr.prefixed('animation') ],
-            // support css animations
+            // support css animations - to be implemented
             support = Modernizr.cssanimations;        
         
-        this.on('click', function(end) {
+        this.on('click', function(e) {
             var options = $(this);
 
             options.$nc = $(this).attr('href');
@@ -78,7 +78,7 @@
  
 }(jQuery));
 
-/// Setting action card positions on mobile screens
+/// Setting inactive action card positions on mobile screens based on viewport height
 function inactiveActionCardPadding() {
     var checkoutContainer = $('#card-container--checkout'),
         momentsContainer = $('#card-container--moments'),
@@ -111,9 +111,10 @@ function inactiveActionCardPadding() {
     setupActionPosition(momentsContainer);
 }
 
-
-$(document).ready(function() {
-    $("a.card--action").PageTransitions();
-});
-
+// Inactive action card positioning on load
 $(window).on("load", inactiveActionCardPadding());
+
+// Card action manager
+$(document).ready(function() {
+    $("a.card--action").cardTransitions();
+});

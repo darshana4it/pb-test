@@ -1,0 +1,32 @@
+/// Photogrid styles for front cover and inside pages
+///
+/// Todo: Componentising to be able to define custom layouts
+$grid-gutter: 5%;
+
+.photo-grid-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: $grid-gutter;
+    padding-left: $grid-gutter;
+    width: 100%;
+    .photo-grid-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: -$grid-gutter;
+        margin-left: -$grid-gutter;
+    }
+    .photo-container {
+        background-size: cover;
+        flex-basis: 0;
+        flex-grow: 1;
+        max-width: 100%;
+    }
+    .photo-size-1 {
+        background-color: color('ui','lighter');
+        height: 33.3%;
+        height: 33.3%;
+    }
+}
+.photo-grid-style-1 {
+
+}

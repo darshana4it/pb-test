@@ -30,10 +30,15 @@ $turned-page-scale: scale(1.07, 1.05); // Todo: Js based fix required to scale a
         .page {
             transform: $turned-page-scale;
 
-            &--flipped {
+            &--turned {
+                box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
                 transform: $page-rotate $turned-page-scale;
+                z-index: 1;
             }
         }
+    }
+    .page {
+        transition: all $transition-duration;
     }
 
 
@@ -41,8 +46,8 @@ $turned-page-scale: scale(1.07, 1.05); // Todo: Js based fix required to scale a
         left: 50%;
         transform: translateX(50%);
     }
-    &--focus-right-page {
-        left: -50%;
-        transform: translateX(-50%);
-    }
+    // &--focus-right-page {
+    //     left: -50%;
+    //     transform: translateX(-50%);
+    // }
 }

@@ -5,11 +5,13 @@ $titlebar-height: 3rem;
 $titlebar-icon-size: icon-size('xs');
 
 .titlebar {
+    color: color('ink');
     display: flex;
     align-items: center;
     height: $titlebar-height;
     margin-bottom: 1rem;
     &__action {
+        color: inherit;
         display: flex;
         justify-content: flex-start;
     }
