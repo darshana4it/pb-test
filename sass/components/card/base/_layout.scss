@@ -52,6 +52,8 @@ $blur-transform: scale(0.9);
     &--sticked-to-bottom {
     }
     &--active {
+        top: 0 !important;
+        max-height: 100vh !important;
         .show-on-card-inactive {
             max-height: 0;
             overflow: hidden;
@@ -80,11 +82,10 @@ $blur-transform: scale(0.9);
 
 
     &--action {
-        width: 100%;
         &-size-fix {
             margin: - ($card-padding);
             padding: $card-padding;
-            width: vw;
+            width: 100vw;
         }
     }
     

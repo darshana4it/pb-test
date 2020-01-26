@@ -12,13 +12,12 @@ $icon-sizes: (
     )
 );
 
-
 /// Returns the SVG icon sizes
 ///
-/// @param {String} $value - The darkness/lightness of the color. Defaults to base.
-/// @return {Color} The color value.
+/// @param {String} $value - The key for the given size variant.
+/// @return {Number} - The size for the variant.
 @function icon-size($value: base) {
-    $fetched-value: map-get($icon-sizes, 'base');
+    $fetched-value: map-get(map-get($icon-sizes, 'base'), $value);
 
     @if $fetched-value != null {
         @return $fetched-value;
@@ -27,22 +26,10 @@ $icon-sizes: (
     }
 }
 
-@mixin recolor-icon($fill-color, $secondary-color: null, $filter-color: null) {
-    svg {
-        fill: $fill-color;
-
-        @if $secondary-color != null {
-            color: $secondary-color;
-        }
-    }
-
-    @if $filter-color != null {
-        img {
-            filter: $filter-color;
-        }
-    }
-}
-
+/// Colors an SVG icon
+///
+/// @param {String} $value - The darkness/lightness of the color.
+/// @return {hue} [base] - The color value. Defaults to base.
 @mixin color-icon($value, $hue: base) {
     svg {
         fill: color($value, $hue);

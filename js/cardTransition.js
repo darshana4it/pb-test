@@ -1,8 +1,9 @@
 /// Card (page) transition manager
 (function($) {
     $.fn.PageTransitions = function() {
-        var currentCard = $('.card-container--active'),
+        var currentCard = false,
             nextCard = false,
+            dataBlur = false,
 
             isAnimating = false,
 			animEndEventNames = {
@@ -12,7 +13,8 @@
                 'animation' : 'animationend'
             },
             inClasses = 'card-container--active card-container--focus',
-            outClasses = 'card-container--inactive card-container--blur',
+            outClasses = 'card-container--inactive',
+            blurClass = 'card-container--blur',
 
             // animation end event name
 			animEndEventName = animEndEventNames[ Modernizr.prefixed('animation') ],
@@ -21,26 +23,51 @@
         
         this.on('click', function(end) {
             var options = $(this);
-            options.$nc = $(this).attr('href')
+
+            options.$nc = $(this).attr('href');
+            options.$cc = $(this);
+            options.$blurNc = $(this).data('blur');
+            options.$blurCc = $(options.$nc).hasClass(blurClass);
 
             nextCardSwitch(options);
         })
         
-        function nextCardSwitch(options) {
-            nextCard = $(options.$nc);
+        function init() {
+            currentCard = $('.card-container--active');
+            dataBlur = false;
+        };
 
-            currentCard.addClass(outClasses)
-                        .removeClass(inClasses)
+        function nextCardSwitch(options) {
+            init();
+            nextCard = $(options.$nc);
+            inClassesMod = inClasses;
+
+            // Blur class injection for current card
+            if(options.$blurNc == true) {
+                outClassesMod  = outClasses + " " + blurClass;
+            }
+            else {
+                outClassesMod = outClasses;
+            }
+
+            currentCard.addClass(outClassesMod)
+                        .removeClass(inClassesMod)
                         .on(animEndEventName, function() {
                             currentCard.off(animEndEventName);
                         })
 
-            nextCard.addClass(inClasses)
-                    .removeClass(outClasses)
-                    .css({
-                            'max-height': $(window).height(),
-                            'top': '0',
-                        })
+
+            // Blur class injection for next card
+            if(options.$blurCc == true) {
+                outClassesMod = outClasses + " " + blurClass;
+            }
+            else {
+                outClassesMod = outClasses;
+            }
+
+            nextCard.addClass(inClassesMod)
+                    .removeClass(outClassesMod)
+                    // .css({'max-height': $(window).height(), 'top': '0'})
                     .on(animEndEventName, function() {
 				        nextCard.off(animEndEventName);
                     })

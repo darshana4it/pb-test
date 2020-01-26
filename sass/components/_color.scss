@@ -1,6 +1,7 @@
+/// Color related global classes
+///
 /// Generates colored backgrounds for elements
-/// Can be used by .bg-{color-name}
-/// Limited to brand colors at the moment
+/// Can be used by .bg-{color-name}, limited to brand colors at the moment
 $brand-colors: map-get($primary-colors, 'brand');
 
 @each $color, $value in $brand-colors {

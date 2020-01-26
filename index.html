@@ -8,15 +8,20 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 <body>
+<!-- Card wrapper starts -->
 <div class="card-wrapper">
+    
+    <!-- Landing card starts -->
     <section id="card-container--landing" class="card-container card-container--focus card-container--active">
         <div class="card card--round card--full-height">
-            <div class="card__notch-fixer"></div>
 
-            <div class="title-bar">
-            </div>
-            
+            <!-- Card common content starts -->
             <div class="grid-container container">
+                <div class="card__notch-fixer"></div>
+
+                <div class="titlebar">
+                </div>
+            
                 <div class="row text-center">
                     <div class="col">
                         <h1>Hi John,</h1>
@@ -26,7 +31,7 @@
                 
                 <div class="row text-center">
                     <div class="col d-flex align-items-center justify-content-center">
-                        <a href="#card-container--moments" class="card--action">
+                        <a href="#card-container--moments" class="card--action d-flex align-items-center justify-content-center">
                             <div class="book"> <!--book--cover-open --> 
                                 <div class="front-cover">
                                     <div class="photo-grid-style-1">
@@ -38,50 +43,89 @@
                     </div>
                 </div>
             </div>
+            <!-- Card common content ends -->
+
         </div>
     </section>
+    <!-- Landing card ends -->
 
+    <!-- Moments card starts -->
     <section id="card-container--moments" class="card-container card-container--inactive card-container--sticked-to-bottom">
         <div class="card card--action card--round text-center bg--white d-flex align-items-center justify-content-center">
+
             <div class="grid-container container">
+
+                <!-- Card inactive content starts -->
                 <div class="row show-on-card-inactive">
-                    <a class="card--action card--action-size-fix card--round text-center bg--white d-flex align-items-center justify-content-center flat-link" href="#card-container--moments">
+                    <a class="card--action card--action-size-fix card--round text-center bg--white d-flex align-items-center justify-content-center flat-link" href="#card-container--moments" data-blur="true">
                         <svg class="icon icon-size--base mr-2"><use xlink:href="/images/pb-icons.svg#layouts" /></svg>
                         <span class="action-caption">Open Your Book</span>
                     </a>
                 </div>
-                <div class="row text-center show-on-card-active">
-                    <div class="col d-flex align-items-center justify-content-center">
-                        <div class="book"> <!--book--cover-open --> 
-                            <div class="back-cover"></div>
-                            <div class="page page6"></div>
-                            <div class="page page5"></div>
-                            <div class="page page4"></div>
-                            <div class="page page3"></div>
-                            <div class="page page2"></div>
-                            <div class="page page1"></div>
-                            <div class="front-cover">
-                                <div class="photo-grid-style-1">
-                                    Todo
+                <!-- Card inactive content ends -->
+
+                <!-- Card active content starts -->
+                <div class="show-on-card-active">
+                    
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card__notch-fixer"></div>
+                        </div>
+                        <div class="col-12">
+                            <div class="titlebar">
+                                <a href="#card-container--landing" class="card--action titlebar__action"><svg class="icon titlebar__icon mr-auto"><use xlink:href="/images/pb-icons.svg#back" /></svg></a>
+                                <div class="titlebar__title"><span class="text-center">Best Moments of 2019</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row text-center show-on-card-active">
+                        <div class="col d-flex align-items-center justify-content-center">
+                            <div class="book"> <!--book--cover-open --> 
+                                <div class="back-cover"></div>
+                                <div class="page page6"></div>
+                                <div class="page page5"></div>
+                                <div class="page page4"></div>
+                                <div class="page page3"></div>
+                                <div class="page page2"></div>
+                                <div class="page page1"></div>
+                                <div class="front-cover">
+                                    <div class="photo-grid-style-1">
+                                        Todo
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <!-- Card active content ends -->
+
             </div>
+
         </div>
     </section>
+    <!-- Moments card ends -->
     
+    <!-- Checkout card starts -->
     <section id="card-container--checkout" class="card-container card-container--inactive card-container--sticked-to-bottom">
-        <a class="card card--action card--round text-center bg--base d-flex align-items-center justify-content-center show-on-card-inactive flat-link" href="#card-container--checkout">
-            <svg class="icon icon-size--xl mr-2"><use xlink:href="/images/pb-icons.svg#photos"/></svg>
-            <span class="text-left">
-                <span class="action-caption d-block">Checkout & Save 40% Now!</span>
-                <span class="meta">Offer ends in 1 hour 6 minutes</span>
-            </span>
-        </a>
+        
+        <!-- Card inactive content starts -->
+        <div class="row show-on-card-inactive">
+            <a class="card card--action card--round text-center bg--base d-flex align-items-center justify-content-center flat-link" href="#card-container--checkout" data-blur="true">
+                <svg class="icon icon-size--xl mr-2"><use xlink:href="/images/pb-icons.svg#photos"/></svg>
+                <span class="text-left">
+                    <span class="action-caption d-block">Checkout & Save 40% Now!</span>
+                    <span class="meta">Offer ends in 1 hour 6 minutes</span>
+                </span>
+            </a>
+        </div>
+        <!-- Card inactive content ends -->
+
     </section>
+    <!-- Checkout card ends -->
+
 </div>
+<!-- Card wrapper starts -->
 </body>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript" src="./js/cardTransition.js"></script>

@@ -1,3 +1,7 @@
+/// Global svg icon styles
+///
+/// Note: To be able to insert icons without a size class (below), a default width & height...
+/// ...(will be replaced if size classes exists) can be defined. Not recommended as these will be overwritten
 svg:not(:root) {
     overflow: hidden;
 }

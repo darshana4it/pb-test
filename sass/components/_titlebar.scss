@@ -1,0 +1,32 @@
+/// Mobile titlebar
+/// 
+/// Should be placed inside of the grid
+$titlebar-height: 3rem;
+$titlebar-icon-size: icon-size('xs');
+
+.titlebar {
+    display: flex;
+    align-items: center;
+    height: $titlebar-height;
+    margin-bottom: 1rem;
+    &__action {
+        display: flex;
+        justify-content: flex-start;
+    }
+    &__icon {
+        height: $titlebar-icon-size;
+        width: $titlebar-icon-size;
+    }
+    &__title {
+        display: flex;
+        flex-grow: 1;
+        font-size: font-size('caption');
+        font-weight: font-weight('bold');
+        line-height: line-height('caption');
+        text-transform: capitalize;
+        span {
+            text-align: center;
+            width: 100%;
+        }
+    }
+}
