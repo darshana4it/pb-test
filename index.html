@@ -3,8 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<title>Book Demo</title>
+<title>Photobook Checkout</title>
 <link rel="stylesheet" href="./css/main.css">
+
+<link rel="shortcut icon" href="/images/favicons/favicon.png">
+<link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/images/favicons/apple-touch-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/images/favicons/apple-touch-icon-114x114.png">
+
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
 </head>
 <body>
@@ -42,46 +48,46 @@
                                     <div class="photo-grid-container photo-grid-style-1">
                                         <div class="photo-grid-row">
                                             <div class="photo-column photo-column--size-1">
-                                                <div class="photo-container"></div>
+                                                <div class="photo-container" style="background-image: url('./images/_temp_thumbs/_temp_thumb-02.jpg');"></div>
                                             </div>
                                             <div class="photo-column photo-column--size-1">
-                                                <!-- <div class="photo-container"></div> -->
+                                                <!-- layout blank -->
                                             </div>
                                             <div class="photo-column photo-column--size-1">
-                                                <div class="photo-container"></div>
-                                            </div>
-                                        </div>
-                                        <div class="photo-grid-row">
-                                            <div class="photo-column photo-column--size-1">
-                                                <div class="photo-container"></div>
-                                            </div>
-                                            <div class="photo-column photo-column--size-1">
-                                                <div class="photo-container"></div>
-                                            </div>
-                                            <div class="photo-column photo-column--size-1">
-                                                <div class="photo-container"></div>
+                                                <div class="photo-container" style="background-image: url('./images/_temp_thumbs/_temp_thumb-06.jpg')"></div>
                                             </div>
                                         </div>
                                         <div class="photo-grid-row">
                                             <div class="photo-column photo-column--size-1">
-                                                <div class="photo-container"></div>
+                                                <div class="photo-container" style="background-image: url('./images/_temp_thumbs/_temp_thumb-04.jpg')"></div>
                                             </div>
                                             <div class="photo-column photo-column--size-1">
-                                                <div class="photo-container"></div>
+                                                <div class="photo-container" style="background-image: url('./images/_temp_thumbs/_temp_thumb-05.jpg')"></div>
                                             </div>
                                             <div class="photo-column photo-column--size-1">
-                                                <div class="photo-container"></div>
+                                                <div class="photo-container" style="background-image: url('./images/_temp_thumbs/_temp_thumb-01.jpg')"></div>
                                             </div>
                                         </div>
                                         <div class="photo-grid-row">
                                             <div class="photo-column photo-column--size-1">
-                                                <!-- <div class="photo-container"></div> -->
+                                                <div class="photo-container" style="background-image: url('./images/_temp_thumbs/_temp_thumb-02.jpg')"></div>
                                             </div>
                                             <div class="photo-column photo-column--size-1">
-                                                <div class="photo-container"></div>
+                                                <div class="photo-container" style="background-image: url('./images/_temp_thumbs/_temp_thumb-09.jpg')"></div>
                                             </div>
                                             <div class="photo-column photo-column--size-1">
-                                                <!-- <div class="photo-container"></div> -->
+                                                <div class="photo-container" style="background-image: url('./images/_temp_thumbs/_temp_thumb-07.jpg')"></div>
+                                            </div>
+                                        </div>
+                                        <div class="photo-grid-row">
+                                            <div class="photo-column photo-column--size-1">
+                                                <!-- layout blank -->
+                                            </div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <div class="photo-container" style="background-image: url('./images/_temp_thumbs/_temp_thumb-08.jpg')"></div>
+                                            </div>
+                                            <div class="photo-column photo-column--size-1">
+                                                <!-- layout blank -->
                                             </div>
                                         </div>
                                     </div>
@@ -98,8 +104,9 @@
     </section>
     <!-- Landing card ends -->
 
-    <section>
-        <div class="navbar d-none d-md-block">
+    <!-- Navbar starts: Desktop only -->
+    <section class="d-none d-md-block">
+        <div class="navbar">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-md-12 d-flex align-items-center">
@@ -114,6 +121,7 @@
             </div>
         </div>
     </section>
+    <!-- Navbar ends -->
 
     <!-- Moments card starts -->
     <section id="card-container--moments" class="card-container card-container--inactive card-container--sticked-to-bottom">
@@ -131,6 +139,7 @@
                     </div>
                     <!-- Card inactive content ends -->
 
+                    <!-- Toolpanel starts: Desktop only -->
                     <div class="d-none d-md-flex toolpanel justify-content-center flex-wrap">
                         <div class="tab-container w-100">
                             <div class="tab-panel">
@@ -152,13 +161,31 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-4 photo-column">
-                                                    <div class="photo-preview photo-preview--active"></div>
+                                                    <div class="photo-preview photo-preview--active" style="background-image: url('./images/_temp_thumbs/_temp_thumb-02.jpg');"></div>
                                                 </div>
                                                 <div class="col-4 photo-column">
-                                                    <div class="photo-preview photo-preview--active"></div>
+                                                    <div class="photo-preview photo-preview--active" style="background-image: url('./images/_temp_thumbs/_temp_thumb-06.jpg');"></div>
                                                 </div>
                                                 <div class="col-4 photo-column">
-                                                    <div class="photo-preview photo-preview--active"></div>
+                                                    <div class="photo-preview photo-preview--active" style="background-image: url('./images/_temp_thumbs/_temp_thumb-04.jpg');"></div>
+                                                </div>
+                                                <div class="col-4 photo-column">
+                                                    <div class="photo-preview photo-preview--active" style="background-image: url('./images/_temp_thumbs/_temp_thumb-05.jpg');"></div>
+                                                </div>
+                                                <div class="col-4 photo-column">
+                                                    <div class="photo-preview photo-preview--active" style="background-image: url('./images/_temp_thumbs/_temp_thumb-01.jpg');"></div>
+                                                </div>
+                                                <div class="col-4 photo-column">
+                                                    <div class="photo-preview photo-preview--active" style="background-image: url('./images/_temp_thumbs/_temp_thumb-02.jpg');"></div>
+                                                </div>
+                                                <div class="col-4 photo-column">
+                                                    <div class="photo-preview photo-preview--active" style="background-image: url('./images/_temp_thumbs/_temp_thumb-09.jpg');"></div>
+                                                </div>
+                                                <div class="col-4 photo-column">
+                                                    <div class="photo-preview photo-preview--active" style="background-image: url('./images/_temp_thumbs/_temp_thumb-07.jpg');"></div>
+                                                </div>
+                                                <div class="col-4 photo-column">
+                                                    <div class="photo-preview photo-preview--active" style="background-image: url('./images/_temp_thumbs/_temp_thumb-08.jpg');"></div>
                                                 </div>
                                             </div>
                                             <div class="row">
@@ -166,19 +193,22 @@
                                             </div>
                                             <div class="row">
                                                 <div class="col-4 photo-column">
-                                                    <div class="photo-preview"></div>
+                                                    <div class="photo-preview" style="background-image: url('./images/_temp_thumbs/_temp_thumb-13.jpg');"></div>
                                                 </div>
                                                 <div class="col-4 photo-column">
-                                                    <div class="photo-preview"></div>
+                                                    <div class="photo-preview" style="background-image: url('./images/_temp_thumbs/_temp_thumb-10.jpg');"></div>
                                                 </div>
                                                 <div class="col-4 photo-column">
-                                                    <div class="photo-preview"></div>
+                                                    <div class="photo-preview" style="background-image: url('./images/_temp_thumbs/_temp_thumb-15.jpg');"></div>
                                                 </div>
                                                 <div class="col-4 photo-column">
-                                                    <div class="photo-preview"></div>
+                                                    <div class="photo-preview" style="background-image: url('./images/_temp_thumbs/_temp_thumb-12.jpg');"></div>
                                                 </div>
                                                 <div class="col-4 photo-column">
-                                                    <div class="photo-preview"></div>
+                                                    <div class="photo-preview" style="background-image: url('./images/_temp_thumbs/_temp_thumb-11.jpg');"></div>
+                                                </div>
+                                                <div class="col-4 photo-column">
+                                                    <div class="photo-preview" style="background-image: url('./images/_temp_thumbs/_temp_thumb-14.jpg');"></div>
                                                 </div>
                                             </div>
                                         </div>
@@ -194,6 +224,7 @@
                             </div>
                         </div>
                     </div>
+                    <!-- Toolpanel ends -->
 
                     <!-- Card active content starts -->
                     <div class="col-sm-12 show-on-card-active d-flex flex-wrap justify-content-center viewpanel">
@@ -232,46 +263,46 @@
                                         <div class="photo-grid-container photo-grid-style-1">
                                             <div class="photo-grid-row">
                                                 <div class="photo-column photo-column--size-1">
-                                                    <div class="photo-container"></div>
+                                                    <div class="photo-container" style="background-image: url('./images/_temp_thumbs/_temp_thumb-02.jpg');"></div>
                                                 </div>
                                                 <div class="photo-column photo-column--size-1">
-                                                    <!-- <div class="photo-container"></div> -->
+                                                    <!-- layout blank -->
                                                 </div>
                                                 <div class="photo-column photo-column--size-1">
-                                                    <div class="photo-container"></div>
-                                                </div>
-                                            </div>
-                                            <div class="photo-grid-row">
-                                                <div class="photo-column photo-column--size-1">
-                                                    <div class="photo-container"></div>
-                                                </div>
-                                                <div class="photo-column photo-column--size-1">
-                                                    <div class="photo-container"></div>
-                                                </div>
-                                                <div class="photo-column photo-column--size-1">
-                                                    <div class="photo-container"></div>
+                                                    <div class="photo-container" style="background-image: url('./images/_temp_thumbs/_temp_thumb-06.jpg')"></div>
                                                 </div>
                                             </div>
                                             <div class="photo-grid-row">
                                                 <div class="photo-column photo-column--size-1">
-                                                    <div class="photo-container"></div>
+                                                    <div class="photo-container" style="background-image: url('./images/_temp_thumbs/_temp_thumb-04.jpg')"></div>
                                                 </div>
                                                 <div class="photo-column photo-column--size-1">
-                                                    <div class="photo-container"></div>
+                                                    <div class="photo-container" style="background-image: url('./images/_temp_thumbs/_temp_thumb-05.jpg')"></div>
                                                 </div>
                                                 <div class="photo-column photo-column--size-1">
-                                                    <div class="photo-container"></div>
+                                                    <div class="photo-container" style="background-image: url('./images/_temp_thumbs/_temp_thumb-01.jpg')"></div>
                                                 </div>
                                             </div>
                                             <div class="photo-grid-row">
                                                 <div class="photo-column photo-column--size-1">
-                                                    <!-- <div class="photo-container"></div> -->
+                                                    <div class="photo-container" style="background-image: url('./images/_temp_thumbs/_temp_thumb-02.jpg')"></div>
                                                 </div>
                                                 <div class="photo-column photo-column--size-1">
-                                                    <div class="photo-container"></div>
+                                                    <div class="photo-container" style="background-image: url('./images/_temp_thumbs/_temp_thumb-09.jpg')"></div>
                                                 </div>
                                                 <div class="photo-column photo-column--size-1">
-                                                    <!-- <div class="photo-container"></div> -->
+                                                    <div class="photo-container" style="background-image: url('./images/_temp_thumbs/_temp_thumb-07.jpg')"></div>
+                                                </div>
+                                            </div>
+                                            <div class="photo-grid-row">
+                                                <div class="photo-column photo-column--size-1">
+                                                    <!-- layout blank -->
+                                                </div>
+                                                <div class="photo-column photo-column--size-1">
+                                                    <div class="photo-container" style="background-image: url('./images/_temp_thumbs/_temp_thumb-08.jpg')"></div>
+                                                </div>
+                                                <div class="photo-column photo-column--size-1">
+                                                    <!-- layout blank -->
                                                 </div>
                                             </div>
                                         </div>

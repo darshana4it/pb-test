@@ -95,8 +95,8 @@ function photobookResizer() {
     var pageWidth, pageHeight;
 
     var basePage = {
-        height: 320,
-        width: 500,
+        height: 320, // Todo: dynamically load from photobook style attributes
+        width: 680, // Todo: dynamically load from photobook style attributes
         scale: 1,
         scaleX: 1,
         scaleY: 1
@@ -109,14 +109,15 @@ function photobookResizer() {
         scalePages($page, pageWidth, pageHeight);
         
         //using underscore to delay resize method till finished resizing window
-        $(window).resize(_.debounce(function () {
+        $(window).resize(function () {
             getPageSize();            
             scalePages($page, pageWidth, pageHeight);
-        }, 150));
+            console.log('resized');
+        }, 150);
         
 
         function getPageSize() {
-            pageHeight = $(window).width() - $('.toolbox-panel').outerWidth();
+            pageHeight = $(window).width() - $('.toolpanel').outerWidth();
             pageWidth = $(window).height() - $('.navbar').outerHeight();
         }
 
@@ -128,13 +129,11 @@ function photobookResizer() {
             basePage.scaleY = scaleY;
             basePage.scale = (scaleX > scaleY) ? scaleY : scaleX;
 
-            var newLeftPos = Math.abs(Math.floor(((basePage.width * basePage.scale) - maxWidth)/2));
-            var newTopPos = Math.abs(Math.floor(((basePage.height * basePage.scale) - maxHeight)/2));
+            // var newLeftPos = Math.abs(Math.floor(((basePage.width * basePage.scale) - maxWidth)/2));
+            // var newTopPos = Math.abs(Math.floor(((basePage.height * basePage.scale) - maxHeight)/2));
 
             // page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');left:' + newLeftPos + 'px;top:' + newTopPos + 'px;');
             page.attr('style', '-webkit-transform:scale(' + basePage.scale + ');');
         }
     });
-
-    console.log(basePage.height);
 }

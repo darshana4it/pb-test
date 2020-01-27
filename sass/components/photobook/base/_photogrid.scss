@@ -35,6 +35,7 @@ $grid-gutter: 4px;
         }
         .photo-container {
             background-color: color('ui','lighter');
+            background-size: cover;
             height: 100%;
             width: 100%;
         }
